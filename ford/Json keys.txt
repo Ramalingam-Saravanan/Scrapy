@@ -1,0 +1,11 @@
+FORMTEXT12:Country
+FORMTEXT7: State
+FORMTEXT8: Company Name
+JobTitle: job title
+AutoReq: tough to get url
+LastUpdated : tough to get url
+FORMTEXT19: Skill Team
+PositionsRemaining: no of vacancies
+
+
+

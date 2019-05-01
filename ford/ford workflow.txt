@@ -1,0 +1,15 @@
+ford
+all req ids
+click those and copy job descriptions
+//span[@id='Job Description & Qualifications']
+** Note these xpath varies because under span some descriptions has many childs and some dont
+
+xpath for job id 
+//a[starts-with(@id,'viewjobdetails')]
+
+xpath for search results
+//a[@id='Search__results']/@href
+
+from table copy other data
+
+
