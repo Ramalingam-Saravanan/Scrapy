@@ -51,6 +51,8 @@ class jsonford(scrapy.Spider):
          
          print(self.numJobsSeen)
          jobseen=self.numJobsSeen+1
+         self.Jobdesc_Url()
+         self.jobDescription_scrape() 
          
          #b=response.xpath("//a[@class='yui-pg-next']").extract_first()
          #print(b)
@@ -93,9 +95,34 @@ class jsonford(scrapy.Spider):
     
     def get_Joburl_from_job_dict(self, job_dict):
         t = job_dict['AutoReq']
+        jobid=re.search("(?:jobId\=)[0-9]*",t)
+        jobid=jobid.group()
+        self.jobidlist.append(jobid)
+        #print("jobidfind")
+        #print(self.jobidlist)
         t= remove_tags(t).strip()
         
         return t
+    
+    def Jobdesc_Url(self):
+        for x in self.jobidlist:
+             descUrl=self.modified_url +'&' + x
+             self.jobdescUrl.append(descUrl)
+        return     
+        
+    def jobDescription_scrape(self):
+          for x in self.jobdescUrl:
+            linkss=x
+            print(linkss)
+            yield scrapy.Request(url=linkss,callback=self.descrip)
+            
+            
+              
+    def descrip(self,response):
+        b=response.xpath("//span[@id='Job Description & Qualifications']").extract_first()
+        print("description")
+        print(b)
+        return b
         
     #try    
     '''def seen_all_jobs(self):
