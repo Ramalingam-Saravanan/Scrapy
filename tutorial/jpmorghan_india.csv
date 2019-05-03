@@ -1,0 +1,2 @@
+url,job_role,Requisition id,jobdetails_href,location,job description
+https://jobs.jpmorganchase.com/ListJobs/ByCountry/IN/Page-1,"//*[@id=""job-details""]/div/div/div[*]/div/div[1]/h1/text()","//*[@id=""job-details""]/div/div/div[*]/div/div[1]/div/div[1]/text()","//*[@id=""job-list""]/div/div[2]/table/tr[*]/td[2]/a/@href","//*[@id=""job-details""]/div/div/div[4]/div/div[1]/div/div[2]/span/span/span/text()","//*[@class=""desc""]//text()"
