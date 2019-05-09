@@ -1,2 +1,0 @@
-url,job_role,Requisition id,Location,nextpage_href,Qualifications
-https://mastercard.jobs/ind/jobs/ajax/joblisting/?location=india&num_items=500,"//*[@id=""direct_jobDescriptionText""]/p[4]/text()","//*[@id=""direct_jobDescriptionText""]/p[*]/strong/following-sibling::text()[1]","//*[@id=""location""]/@value",/html/body/ul[*]/li[*]/h4/a/@href,"//*[@id=""direct_jobDescriptionText""]/p[text()=""ALL about You""]"
